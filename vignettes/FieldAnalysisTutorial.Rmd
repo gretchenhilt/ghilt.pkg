@@ -1,0 +1,13 @@
+---
+title: "FieldAnalysisTutorial"
+author: "Gretchen Hilt"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+This package is designed for some quick data cleaning and analysis for herpetological field biologists wanting a quick glance at their data before going in depth later on. For this package, data should include snout-vent-length and mass measurements, genus and species ID's, trap types, and any other data tailored to the researcher's interests and research goals. 

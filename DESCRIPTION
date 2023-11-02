@@ -1,0 +1,22 @@
+Package: hilt.pkg 
+Title: An R package for processing amphibian field collection data 
+Version: 0.1
+Authors@R: c(
+      person(given = "Gretchen",
+      family = "Hilt", 
+      role = c("cre", "aut"),
+      email = "gretchen.hilt@selu.edu")
+      )
+Description: An R package to process field data. This package is for field biologists who want to easily manipulate data that they collect in the field. Most functions allow the user to clean messy field data, make quick unit conversions, and visualize statistics. Users may use this package as a quick, at-a-glance view of their large datasets
+License: MIT + file LICENSE
+Depends: 
+  R (>= 2.10) 
+Imports: 
+  tidyverse, broom 
+RoxygenNote: 7.1.1
+Suggests: 
+  knitr,
+  rmarkdown
+VignetteBuilder: knitr
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
