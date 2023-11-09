@@ -7,11 +7,16 @@
 #' 
 #' @export
 
-
 AGPna <- function(data){
-  clean <- na.omit(data)
+  if (anyNA(data)){
+    print("The data has no NA's - good to go!")
+    clean <- na.omit(data)
+  } else { 
+    print("The data has NA's - go back")
+    clean <- data 
+  }
   return(clean)
 }
 
 #This function was created to clean up the data by removing all the NAs from the dataset.
-##doneGAH
+##doneGAH11/7 - no further action needed. 
