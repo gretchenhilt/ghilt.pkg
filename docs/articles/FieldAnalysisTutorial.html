@@ -72,7 +72,7 @@
                         <h4 data-toc-skip class="author">Gretchen
 Hilt</h4>
             
-            <h4 data-toc-skip class="date">2023-10-31</h4>
+            <h4 data-toc-skip class="date">2023-11-14</h4>
       
       
       <div class="hidden name"><code>FieldAnalysisTutorial.Rmd</code></div>
@@ -81,8 +81,21 @@ Hilt</h4>
 
     
     
-<p>This package is designed for some quick data cleaning and analysis
-for herpetological field biologists wanting a quick glance at their data
+<p>It is customary to show them how to download your package.</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">#devtools::install_github("gretchenhilt/hilt.pkg")</span></span></code></pre></div>
+<p>In this tutorial we are going to use the AGP field data set collected
+by Dr. Christopher Beachy for his dissertation, as well as a sample data
+set of localities of sample sites for Gretchen’s Master’s thesis.</p>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">#install.packages("googlesheets4)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://googlesheets4.tidyverse.org" class="external-link">googlesheets4</a></span><span class="op">)</span></span>
+<span><span class="fu">googlesheets4</span><span class="fu">::</span><span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/gs4_deauth.html" class="external-link">gs4_deauth</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="va">AGP</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html" class="external-link">read_sheet</a></span><span class="op">(</span><span class="st">"https://docs.google.com/spreadsheets/d/1ugMWcZGALxgSLfm3bensXUi6GFj77AKqoZBkH-uFhcA/edit?usp=sharing"</span><span class="op">)</span></span>
+<span><span class="va">wallacei</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html" class="external-link">read_sheet</a></span><span class="op">(</span><span class="st">"https://docs.google.com/spreadsheets/d/1UU8w2xxAyxnrcA9Rr8nGO8-QWGULvp_n9WzQsI4fpFU/edit?usp=sharing"</span><span class="op">)</span></span></code></pre></div>
+<p>Include the packages that your function depends on as well^^ This
+package is designed for some quick data cleaning and analysis for
+herpetological field biologists wanting a quick glance at their data
 before going in depth later on. For this package, data should include
 snout-vent-length and mass measurements, genus and species ID’s, trap
 types, and any other data tailored to the researcher’s interests and
