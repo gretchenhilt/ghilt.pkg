@@ -21,7 +21,7 @@ In this tutorial we are going to use the AGP field data set collected by Dr. Chr
 This tutorial includes sample datasets from the AGP lab, as well as Gretchen's Master's thesis. To upload these datasets to your R studio, please copy the following code into your console: 
 
 ```{r, eval=FALSE}
-install.packages("googlesheets4)
+install.packages("googlesheets4")
 library(googlesheets4)
 googlesheets4::gs4_deauth()
 AGP <- read_sheet("https://docs.google.com/spreadsheets/d/1ugMWcZGALxgSLfm3bensXUi6GFj77AKqoZBkH-uFhcA/edit?usp=sharing")
