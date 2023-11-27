@@ -1,0 +1,7 @@
+AGP_linearmod           Run a linear model with two parameters.
+box_plot                Create a boxplot of species and their mass,
+                        grouped by the species.
+combine_cols            Select specific columns out of your data set
+convert                 Convert grams to kilograms
+mapview                 Create a quick map from lat/long data
+remove_nas              Remove NAs from data set.

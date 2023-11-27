@@ -1,4 +1,4 @@
-Package: hilt.pkg 
+Package: hilt.pkg
 Title: An R package for processing amphibian field collection data 
 Version: 0.1
 Authors@R: c(
@@ -12,7 +12,7 @@ License: MIT + file LICENSE
 Depends: 
   R (>= 2.10) 
 Imports: 
-  tidyverse, broom, sf, broom 
+  tidyverse, broom, sf, mapview, leaflet 
 RoxygenNote: 7.2.3
 Suggests:
   knitr,

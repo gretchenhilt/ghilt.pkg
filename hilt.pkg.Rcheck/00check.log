@@ -1,0 +1,109 @@
+* using log directory ‘/cloud/project/hilt.pkg/hilt.pkg.Rcheck’
+* using R version 4.3.2 (2023-10-31)
+* using platform: x86_64-pc-linux-gnu (64-bit)
+* R was compiled by
+    gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0
+    GNU Fortran (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0
+* running under: Ubuntu 20.04.6 LTS
+* using session charset: UTF-8
+* using options ‘--no-manual --as-cran’
+* checking for file ‘hilt.pkg/DESCRIPTION’ ... OK
+* this is package ‘hilt.pkg’ version ‘0.1’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking serialization versions ... OK
+* checking whether package ‘hilt.pkg’ can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking for future file timestamps ... OK
+* checking DESCRIPTION meta-information ... NOTE
+Malformed Description field: should contain one or more complete sentences.
+* checking top-level files ... NOTE
+Non-standard files/directories found at top level:
+  ‘README.html’ ‘docs’
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking R files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking loading without being on the library search path ... OK
+* checking dependencies in R code ... NOTE
+Namespaces in Imports field not imported from:
+  ‘broom’ ‘leaflet’ ‘mapview’ ‘sf’ ‘tidyverse’
+  All declared Imports should be used.
+* checking S3 generic/method consistency ... OK
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+AGP_linearmod: no visible global function definition for ‘%>%’
+AGP_linearmod: no visible global function definition for ‘select’
+AGP_linearmod: no visible global function definition for ‘quo_name’
+AGP_linearmod: no visible global function definition for ‘starts_with’
+AGP_linearmod: no visible global function definition for ‘lm’
+AGP_linearmod: no visible binding for global variable ‘.’
+box_plot: no visible global function definition for ‘%>%’
+box_plot: no visible global function definition for ‘ggplot’
+box_plot: no visible global function definition for ‘aes’
+box_plot: no visible global function definition for ‘geom_boxplot’
+combine_cols: no visible global function definition for ‘%>%’
+combine_cols: no visible global function definition for ‘mutate’
+combine_cols: no visible global function definition for ‘select’
+combine_cols: no visible binding for global variable ‘new_column’
+convert: no visible global function definition for ‘%>%’
+convert: no visible global function definition for ‘mutate’
+convert: no visible binding for global variable ‘mass’
+convert: no visible binding for global variable ‘mass_kg’
+mapview: no visible global function definition for ‘st_as_sf’
+mapview: no visible global function definition for ‘%>%’
+mapview: no visible global function definition for ‘leaflet’
+mapview: no visible global function definition for ‘addTiles’
+mapview: no visible global function definition for ‘addCircleMarkers’
+remove_nas: no visible global function definition for ‘%>%’
+remove_nas: no visible global function definition for ‘na.omit’
+Undefined global functions or variables:
+  %>% . addCircleMarkers addTiles aes geom_boxplot ggplot leaflet lm
+  mass mass_kg mutate na.omit new_column quo_name select st_as_sf
+  starts_with
+Consider adding
+  importFrom("stats", "lm", "na.omit")
+to your NAMESPACE file.
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd line widths ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... WARNING
+Undocumented data sets:
+  ‘AGP+field+data+copy’ ‘wallacei_sample_sites’
+All user-level objects in a package should have documentation entries.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking for code/documentation mismatches ... OK
+* checking Rd \usage sections ... OK
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking contents of ‘data’ directory ... OK
+* checking data for non-ASCII characters ... OK
+* checking data for ASCII and uncompressed saves ... OK
+* checking files in ‘vignettes’ ... WARNING
+Files in the 'vignettes' directory but no files in 'inst/doc':
+  ‘FieldAnalysisTutorial.Rmd’
+Files named as vignettes but with no recognized vignette engine:
+   ‘vignettes/FieldAnalysisTutorial.Rmd’
+(Is a VignetteBuilder field missing?)
+* checking examples ... NONE
+* checking for non-standard things in the check directory ... OK
+* checking for detritus in the temp directory ... OK
+* DONE
+Status: 2 WARNINGs, 4 NOTEs

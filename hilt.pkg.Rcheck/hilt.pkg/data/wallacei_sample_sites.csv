@@ -1,0 +1,13 @@
+﻿genus ,species,lat,long,state,county,locality,surface,cavern,cave,note
+eurycea,wallacei,30.65727,-85.191429,FL,Jackson,Buzzard Spring,TRUE,FALSE,FALSE,
+eurycea,wallacei,30.778044,-85.167324,FL,Jackson,Gator Hole,TRUE,TRUE,FALSE,
+eurycea,wallacei,30.788074,-85.14485,FL,Jackson,Indian's Washtub Spring,TRUE,FALSE,TRUE,
+eurycea,wallacei,30.783388,-85.156142,FL,Jackson,Hole in the Wall ,TRUE,TRUE,TRUE,
+eurycea,wallacei,30.78695,-85.14488,FL,Jackson,Twin Cave,TRUE,TRUE,TRUE,
+eurycea,wallacei,30.780346,-85.165468,FL,Jackson,Lamar's Landing Spring,TRUE,TRUE,TRUE,
+eurycea,wallacei,30.746111,-85.215833,FL,Jackson,Maund Spring ,TRUE,TRUE,FALSE,
+eurycea,wallacei,30.769111,-85.173611,FL,Jackson,Merrit's Mill Pond,TRUE,TRUE,TRUE,
+eurycea,wallacei,30.788743,-85.221942,FL,Jackson,Sandbag Spring,TRUE,TRUE,FALSE,
+eurycea,wallacei,30.770586,-85.948314,FL,Citrus ,Seven Sister's Spring,TRUE,TRUE,TRUE,safety concern
+eurycea,wallacei,30.79013,-85.14015,FL,Jackson,Jackson Blue Hole,TRUE,TRUE,TRUE,
+eurycea,wallacei ,30.790055,-85.142825,FL,Jackson ,Shangri-La Spring,TRUE,TRUE,TRUE,

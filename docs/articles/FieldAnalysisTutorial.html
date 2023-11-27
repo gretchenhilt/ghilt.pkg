@@ -5,14 +5,14 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FieldAnalysisTutorial • hilt.pkg </title>
+<title>Field Analysis Tutorial • hilt.pkg</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="FieldAnalysisTutorial">
-<meta property="og:description" content="hilt.pkg ">
+<script src="../pkgdown.js"></script><meta property="og:title" content="Field Analysis Tutorial">
+<meta property="og:description" content="hilt.pkg">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -32,7 +32,7 @@
         <span class="icon-bar"></span>
       </button>
       <span class="navbar-brand">
-        <a class="navbar-link" href="../index.html">hilt.pkg </a>
+        <a class="navbar-link" href="../index.html">hilt.pkg</a>
         <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.1</span>
       </span>
     </div>
@@ -50,7 +50,7 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="../articles/FieldAnalysisTutorial.html">FieldAnalysisTutorial</a>
+      <a href="../articles/FieldAnalysisTutorial.html">Field Analysis Tutorial</a>
     </li>
   </ul>
 </li>
@@ -68,11 +68,11 @@
       </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1 data-toc-skip>FieldAnalysisTutorial</h1>
+      <h1 data-toc-skip>Field Analysis Tutorial</h1>
                         <h4 data-toc-skip class="author">Gretchen
 Hilt</h4>
             
-            <h4 data-toc-skip class="date">2023-11-14</h4>
+            <h4 data-toc-skip class="date">2023-11-27</h4>
       
       
       <div class="hidden name"><code>FieldAnalysisTutorial.Rmd</code></div>
@@ -81,30 +81,191 @@ Hilt</h4>
 
     
     
-<p>It is customary to show them how to download your package.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">#devtools::install_github("gretchenhilt/hilt.pkg")</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"gretchenhilt/ghilt.pkg"</span><span class="op">)</span></span></code></pre></div>
+<pre><code><span><span class="co">## Downloading GitHub repo gretchenhilt/ghilt.pkg@HEAD</span></span></code></pre>
+<pre><code><span><span class="co">## stringi (1.8.1 -&gt; 1.8.2) [CRAN]</span></span>
+<span><span class="co">## dplyr   (1.1.3 -&gt; 1.1.4) [CRAN]</span></span>
+<span><span class="co">## tinytex (0.48  -&gt; 0.49 ) [CRAN]</span></span>
+<span><span class="co">## bslib   (0.5.1 -&gt; 0.6.0) [CRAN]</span></span></code></pre>
+<pre><code><span><span class="co">## Installing 4 packages: stringi, dplyr, tinytex, bslib</span></span></code></pre>
+<pre><code><span><span class="co">## Installing packages into '/tmp/RtmplnN0X5/temp_libpath4702a94cddf'</span></span>
+<span><span class="co">## (as 'lib' is unspecified)</span></span></code></pre>
+<pre><code><span><span class="co">## <span style="color: #00BBBB;">──</span> <span style="color: #00BBBB;">R CMD build</span> <span style="color: #00BBBB;">─────────────────────────────────────────────────────────────────</span></span></span>
+<span><span class="co">## * checking for file ‘/tmp/Rtmp9pywWf/remotes5a2280da25b/gretchenhilt-ghilt.pkg-f5f52ce/DESCRIPTION’ ... OK</span></span>
+<span><span class="co">## * preparing ‘hilt.pkg’:</span></span>
+<span><span class="co">## * checking DESCRIPTION meta-information ... OK</span></span>
+<span><span class="co">## * checking for LF line-endings in source and make files and shell scripts</span></span>
+<span><span class="co">## * checking for empty or unneeded directories</span></span>
+<span><span class="co">## * looking to see if a ‘data/datalist’ file should be added</span></span>
+<span><span class="co">## * building ‘hilt.pkg_0.1.tar.gz’</span></span>
+<span><span class="co">## Warning: invalid uid value replaced by that for user 'nobody'</span></span></code></pre>
+<pre><code><span><span class="co">## Installing package into '/tmp/RtmplnN0X5/temp_libpath4702a94cddf'</span></span>
+<span><span class="co">## (as 'lib' is unspecified)</span></span></code></pre>
+<pre><code><span><span class="co">## Warning in i.p(...): installation of package</span></span>
+<span><span class="co">## '/tmp/Rtmp9pywWf/file5a21f426fcf/hilt.pkg_0.1.tar.gz' had non-zero exit status</span></span></code></pre>
 <p>In this tutorial we are going to use the AGP field data set collected
 by Dr. Christopher Beachy for his dissertation, as well as a sample data
-set of localities of sample sites for Gretchen’s Master’s thesis.</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">#install.packages("googlesheets4)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://googlesheets4.tidyverse.org" class="external-link">googlesheets4</a></span><span class="op">)</span></span>
-<span><span class="fu">googlesheets4</span><span class="fu">::</span><span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/gs4_deauth.html" class="external-link">gs4_deauth</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="va">AGP</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html" class="external-link">read_sheet</a></span><span class="op">(</span><span class="st">"https://docs.google.com/spreadsheets/d/1ugMWcZGALxgSLfm3bensXUi6GFj77AKqoZBkH-uFhcA/edit?usp=sharing"</span><span class="op">)</span></span>
-<span><span class="va">wallacei</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html" class="external-link">read_sheet</a></span><span class="op">(</span><span class="st">"https://docs.google.com/spreadsheets/d/1UU8w2xxAyxnrcA9Rr8nGO8-QWGULvp_n9WzQsI4fpFU/edit?usp=sharing"</span><span class="op">)</span></span></code></pre></div>
-<p>Include the packages that your function depends on as well^^ This
+set of localities of sample sites for Gretchen’s Master’s thesis. This
 package is designed for some quick data cleaning and analysis for
-herpetological field biologists wanting a quick glance at their data
-before going in depth later on. For this package, data should include
+herpetology field biologists wanting a quick glance at their data before
+going in depth later on. For this package, data should include
 snout-vent-length and mass measurements, genus and species ID’s, trap
 types, and any other data tailored to the researcher’s interests and
 research goals.</p>
+<p>#Uploading sample data sets</p>
+<p>This tutorial includes sample datasets from the AGP lab, as well as
+Gretchen’s Master’s thesis. To upload these datasets to your R studio,
+please copy the following code into your console:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"googlesheets4)</span></span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a><span class="st">library(googlesheets4)</span></span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="st">googlesheets4::gs4_deauth()</span></span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a><span class="st">AGP &lt;- read_sheet("</span>https<span class="sc">:</span><span class="er">//</span>docs.google.com<span class="sc">/</span>spreadsheets<span class="sc">/</span>d<span class="sc">/</span>1ugMWcZGALxgSLfm3bensXUi6GFj77AKqoZBkH<span class="sc">-</span>uFhcA<span class="sc">/</span>edit?<span class="at">usp=</span>sharing<span class="st">")</span></span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a><span class="st">wallacei &lt;- read_sheet("</span>https<span class="sc">:</span><span class="er">//</span>docs.google.com<span class="sc">/</span>spreadsheets<span class="sc">/</span>d<span class="sc">/</span>1UU8w2xxAyxnrcA9Rr8nGO8<span class="sc">-</span>QWGULvp_n9WzQsI4fpFU<span class="sc">/</span>edit?<span class="at">usp=</span>sharing<span class="st">")</span></span></code></pre></div>
+<p>To verify the data uploaded correctly, call and view the datasets by
+inserting the following code into your console:</p>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">wallacei</span> </span>
+<span><span class="va">AGP</span> </span></code></pre></div>
+<p>#Installing Field Analysis and required dependencies</p>
+<p>Several packages are required to successfully use this package. To
+install these required packages (as well as the Field Analysis package),
+please put the following code into your console:</p>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"tidyverse"</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"leaflet"</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://rstudio.github.io/leaflet/" class="external-link">leaflet</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"broom"</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://broom.tidymodels.org/" class="external-link">broom</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"sf"</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/" class="external-link">sf</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"ggplot2"</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"gretchenhilt/ghilt.pkg"</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"hilt.pkg"</span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">hilt.pkg</span><span class="op">)</span></span></code></pre></div>
+<p>To download your own data for this package, click the upload button
+in the ‘Files’ tab of your R window (bottom right window of R studio).
+Select your target directory, and choose a .csv file from your computer.
+Now that your data is uploaded, you further need to make it usable in R
+studio. To achieve this, insert the following code into your console,
+changing the code to reflect the name of your file:</p>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">datafile_name</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html" class="external-link">read_csv</a></span><span class="op">(</span><span class="st">"whateveryourdatasetnameis.csv"</span><span class="op">)</span></span></code></pre></div>
+<p>Now your data is usable in R.</p>
+<p>#Functions in this Package</p>
+<p>This package contains six functions unique to analyzing and
+visualizing field data quickly. The following information will break
+down each function, what is required for the function, and how to use
+it. For this tutorial, we will be using “AGP” as the main data set
+example, and “wallacei” as the map-making dataset example. All of the
+examples below should be changed to fit your specific data.</p>
+<div class="section level2">
+<h2 id="cleaning-data---removing-nas">Cleaning data - removing NA’s<a class="anchor" aria-label="anchor" href="#cleaning-data---removing-nas"></a>
+</h2>
+<p>This function’s purpose is to remove all NA values from your data
+set. NA values are usually empty columns in your data set that are
+missing data. This is an easy to remove NA’s instead of having to
+manually remove empty columns from your excel file. Not removing NA’s
+can cause many issues in data analysis and can effect any calculations
+or analyses you do in R. This function is called remove_nas(). See the
+code below:</p>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu"><a href="../reference/remove_nas.html">remove_nas</a></span><span class="op">(</span><span class="va">AGP</span><span class="op">)</span></span>
+<span><span class="va">AGP</span></span></code></pre></div>
+<p>When you call AGP (or your data set name), you should be returned an
+NA-free data set. The function has a built in check, so that if your
+data set is in the wrong format, it will give you an alert message and
+not run the function.</p>
+</div>
+<div class="section level2">
+<h2 id="creating-a-boxplot">Creating a boxplot<a class="anchor" aria-label="anchor" href="#creating-a-boxplot"></a>
+</h2>
+<p>The second function found in this package is a box plot function.
+This makes displaying your data variables easier. For example, if you
+wanted to see the masses of each critter you sampled displayed quickly,
+you can use this function to do so. This function is called box_plot().
+You will need your x variable(categorical) and your y variable
+(numerical). See the code below:</p>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">boxplot_svl</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/box_plot.html">box_plot</a></span><span class="op">(</span><span class="va">AGP</span>, <span class="va">critter</span>, <span class="va">svl</span><span class="op">)</span></span>
+<span><span class="va">box_plot_svl</span></span></code></pre></div>
+<p>If it worked, a boxplot of your variables will appear in the bottom
+right panel of your R studio. If it did not work, you will get an error
+message.</p>
+<p>##Combining Columns The next function’s purpose is to combine columns
+together faster instead of ruining your columns in excel. For example,
+if you wanted the genus and species together into one column, you could
+do that. In this case, the wallacei dataset has genus and species in two
+separate columns. See the below example to combine these columns. This
+function is called combine_cols(). You will need your dataset, and the
+names of the two columns you wish to combine. See the code below:</p>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">binomial_col</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/combine_cols.html">combine_cols</a></span><span class="op">(</span><span class="va">wallacei</span>, <span class="va">genus</span>, <span class="va">species</span>, separator <span class="op">=</span> <span class="st">"_"</span><span class="op">)</span></span>
+<span><span class="va">binomail_col</span></span></code></pre></div>
+<p>If the function worked, you should get back the new column it its own
+dataframe. If it did not work, you will get an error message saying “the
+columns are not in your dataset.”</p>
+<p>##Converting grams to kilograms Sometimes further analyses require
+kilograms as the mass value. However, most field mass collection is
+denoted in grams. This next function converts grams to kilograms, as
+well as doubles the kilograms, and makes two new columns in your data
+set for the new values. This function is called convert(). You will need
+just your data set. See the code below:</p>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">kilogram_conversion</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/convert.html">convert</a></span><span class="op">(</span><span class="va">AGP</span><span class="op">)</span></span>
+<span><span class="va">kilogram_conversion</span></span></code></pre></div>
+<p>If your function worked, you will be given the AGP data set back as a
+new dataframe with the two new columns tacked on the end. If it failed,
+you will get an error message telling you the function did not work
+(most likely due to non-numerical data).</p>
+<p>##Linear modeling When you’re in a time crunch for your weekly lab
+meeting and don’t want to run a complex statistical analysis (but still
+want to look like you did your job), you can use this next function to
+do a quick linear model of two variables. This next function runs a
+linear model with a numerical and categorical value of your choice. This
+function is called AGP_linearmod(). You will need your independent
+variable(categorical) and dependent variable(numerical). In this
+example, we will be running a linear model on critters and their
+snout-vent length (svl). See the code below:</p>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">lm_mass</span><span class="op">+</span><span class="va">critter</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/AGP_linearmod.html">AGP_linearmod</a></span><span class="op">(</span><span class="va">AGP</span>, <span class="st">"svl"</span>, <span class="st">"critter"</span><span class="op">)</span></span>
+<span><span class="va">lm_mass</span><span class="op">+</span><span class="va">critter</span></span></code></pre></div>
+<p>If your function ran correctly, you will be returned a summary
+statistics response. Here you will see your F statistic, p values,
+standard error, and R^2 values. If it did use the correct variable
+types, you will get a message</p>
+<p>##Interactive Map The last function in this package is a map-making
+function. The map will depict the latitudes/longitudes of your sample
+sites, and allow the user to zoom in on the sample sites through the
+html map output. This function is called mapview(). You will need
+latitude and longitude columns in your data set, with the columns named
+“lat” and “long”, respectively. For this example, we will be plotting
+some of the E. wallacei sample sites used in Gretchen’s master’s thesis.
+See the code below:</p>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">nicemap</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/mapview.html">mapview</a></span><span class="op">(</span><span class="va">wallacei</span>, long <span class="op">=</span> <span class="st">"long"</span>, lat <span class="op">=</span> <span class="st">"lat"</span>, layer_name <span class="op">=</span> <span class="st">"wallacei map"</span><span class="op">)</span></span>
+<span><span class="va">nicemap</span></span></code></pre></div>
+<p>If your function worked, an interactive map will appear in the bottom
+right panel of your R studio. If your function did not work because your
+columns are not numerical, you will get an error message with the
+problem. You can export this map as a html by clicking the “Export”
+button in the viewer panel.</p>
+<p>Thanks for reading this tutorial - happy herping!</p>
+</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-      </div>
+        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
+    </nav>
+</div>
 
 </div>
 
