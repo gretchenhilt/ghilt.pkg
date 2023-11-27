@@ -16,7 +16,7 @@ devtools::install_github("gretchenhilt/ghilt.pkg")
 
 In this tutorial we are going to use the AGP field data set collected by Dr. Christopher Beachy for his dissertation, as well as a sample data set of localities of sample sites for Gretchen's Master's thesis. This package is designed for some quick data cleaning and analysis for herpetology field biologists wanting a quick glance at their data before going in depth later on. For this package, data should include snout-vent-length and mass measurements, genus and species ID's, trap types, and any other data tailored to the researcher's interests and research goals. 
 
-#Uploading sample data sets 
+# Uploading sample data sets 
 
 This tutorial includes sample datasets from the AGP lab, as well as Gretchen's Master's thesis. To upload these datasets to your R studio, please copy the following code into your console: 
 
@@ -33,7 +33,7 @@ wallacei
 AGP 
 ```
 
-#Installing Field Analysis and required dependencies 
+# Installing Field Analysis and required dependencies 
 
 Several packages are required to successfully use this package. To install these required packages (as well as the Field Analysis package), please put the following code into your console: 
 ```{r, eval=FALSE}
@@ -65,7 +65,7 @@ datafile_name <- read_csv("whateveryourdatasetnameis.csv")
 
 Now your data is usable in R. 
 
-#Functions in this Package
+# Functions in this Package
 
 This package contains six functions unique to analyzing and visualizing field data quickly. The following information will break down each function, what is required for the function, and how to use it. For this tutorial, we will be using "AGP" as the main data set example, and "wallacei" as the map-making dataset example. All of the examples below should be changed to fit your specific data. 
 
@@ -87,7 +87,7 @@ box_plot_svl
 ```
 If it worked, a boxplot of your variables will appear in the bottom right panel of your R studio. If it did not work, you will get an error message. 
 
-##Combining Columns
+## Combining Columns
 The next function's purpose is to combine columns together faster instead of ruining your columns in excel. For example, if you wanted the genus and species together into one column, you could do that. In this case, the wallacei dataset has genus and species in two separate columns. See the below example to combine these columns. 
 This function is called combine_cols(). You will need your dataset, and the names of the two columns you wish to combine. 
 See the code below: 
@@ -97,7 +97,7 @@ binomail_col
 ```
 If the function worked, you should get back the new column it its own dataframe. If it did not work, you will get an error message saying "the columns are not in your dataset." 
 
-##Converting grams to kilograms
+## Converting grams to kilograms
 Sometimes further analyses require kilograms as the mass value. However, most field mass collection is denoted in grams. This next function converts grams to kilograms, as well as doubles the kilograms, and makes two new columns in your data set for the new values. 
 This function is called convert(). You will need just your data set. 
 See the code below: 
@@ -107,7 +107,7 @@ kilogram_conversion
 ```
 If your function worked, you will be given the AGP data set back as a new dataframe with the two new columns tacked on the end. If it failed, you will get an error message telling you the function did not work (most likely due to non-numerical data). 
 
-##Linear modeling
+## Linear modeling
 When you're in a time crunch for your weekly lab meeting and don't want to run a complex statistical analysis (but still want to look like you did your job), you can use this next function to do a quick linear model of two variables. This next function runs a linear model with a numerical and categorical value of your choice. 
 This function is called AGP_linearmod(). You will need your independent variable(categorical) and dependent variable(numerical). In this example, we will be running a linear model on critters and their snout-vent length (svl). 
 See the code below: 
@@ -117,7 +117,7 @@ lm_mass+critter
 ```
 If your function ran correctly, you will be returned a summary statistics response. Here you will see your F statistic, p values, standard error, and R^2 values. If it did use the correct variable types, you will get a message
 
-##Interactive Map
+## Interactive Map
 The last function in this package is a map-making function. The map will depict the latitudes/longitudes of your sample sites, and allow the user to zoom in on the sample sites through the html map output. 
 This function is called mapview(). You will need latitude and longitude columns in your data set, with the columns named "lat" and "long", respectively. For this example, we will be plotting some of the E. wallacei sample sites used in Gretchen's master's thesis. 
 See the code below: 

@@ -1,16 +1,16 @@
 # Amphibian and Reptile Field Analysis - An R package for processing amphibian or reptile field collection data. 
 
-##Introduction
+## Introduction
 This package is intended for field biologists with terrible handwriting to quickly analyze and clean messy data before their supervisor sees.
 
 This package includes 6 functions that perform many different tasks, including removing NA values from your data set; visualizing your data; creating a quick, interactive map of your sample sites; and more. 
 
 Some of the tasks of the functions found in this package are dependent on other R packages. These packages are listed in the "Field Analysis Tutorial". 
 
-##Installing this package and associated required dependcies
+## Installing this package and associated required dependcies
 To install this package into your own R studio, see the "Field Analysis Tutorial" on the top task bar of the website for a detailed, step-by-step tutorial. 
 
-##Columns of the AGP sample dataset
+## Columns of the AGP sample dataset
 See below for a comprehensive list of variables and their column names in the AGP dataset: 
 - id: field tag identification number specific to organism captured
 - date: date of organism capture (month/day/year)
