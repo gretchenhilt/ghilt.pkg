@@ -52,9 +52,6 @@ library(sf)
 install.packages("ggplot2")
 library(ggplot2)
 
-remotes::install_github("gretchenhilt/ghilt.pkg")
-install.packages("hilt.pkg")
-library(hilt.pkg)
 ```
 
 To download your own data for this package, click the upload button in the 'Files' tab of your R window (bottom right window of R studio). Select your target directory, and choose a .csv file from your computer. Now that your data is uploaded, you further need to make it usable in R studio. To achieve this, insert the following code into your console, changing the code to reflect the name of your file: 
@@ -112,8 +109,8 @@ When you're in a time crunch for your weekly lab meeting and don't want to run a
 This function is called AGP_linearmod(). You will need your independent variable(categorical) and dependent variable(numerical). In this example, we will be running a linear model on critters and their snout-vent length (svl). 
 See the code below: 
 ```{r, eval=FALSE}
-lm_mass+critter <- AGP_linearmod(AGP, "svl", "critter")
-lm_mass+critter
+lm_mass_critter <- AGP_linearmod(AGP, "svl", "critter")
+lm_mass_critter
 ```
 If your function ran correctly, you will be returned a summary statistics response. Here you will see your F statistic, p values, standard error, and R^2 values. If it did use the correct variable types, you will get a message
 
